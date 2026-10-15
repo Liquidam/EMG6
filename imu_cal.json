@@ -1,0 +1,20 @@
+{
+  "floor": 2.0,
+  "leak": 0.0,
+  "limit": 180.0,
+  "el_source": "gravity",
+  "roll_source": "gyro",
+  "gbias": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "roll_off": 0.0,
+  "pitch_off": 0.0,
+  "az_lo": -60.0,
+  "az_hi": 60.0,
+  "el_lo": -45.0,
+  "el_hi": 45.0,
+  "roll_lo": -45.0,
+  "roll_hi": 45.0
+}

@@ -1,0 +1,8 @@
+.DS_Store
+__pycache__/
+*.pyc
+# recordings and TouchDesigner auto-saves
+OUT_*/
+Backup/
+EMG6.[0-9]*.toe
+CrashAutoSave*

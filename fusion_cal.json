@@ -1,0 +1,35 @@
+{
+  "gbias": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "qref": [
+    -0.46148934960365295,
+    -0.049733858555555344,
+    0.004859281238168478,
+    0.8857373595237732
+  ],
+  "hand_cal": {
+    "az_lo": -110.0,
+    "az_hi": 110.0,
+    "el_lo": -41.0,
+    "el_hi": 72.0,
+    "roll_lo": -45.0,
+    "roll_hi": 45.0
+  },
+  "az_hand": 0.0,
+  "az_fast": 0.0,
+  "el_fast": 0.0,
+  "roll_fast": 0.0,
+  "roll_off": -3.2621705988299863,
+  "pitch_off": 1.9607807061612623,
+  "az_sign": -1.0,
+  "el_sign": 1.0,
+  "roll_sign": -1.0,
+  "az_gain": 1.0,
+  "el_grav_sign": 1.0,
+  "roll_grav_sign": -1.0,
+  "el_use_gravity": true,
+  "roll_use_gravity": false
+}
