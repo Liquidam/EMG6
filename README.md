@@ -73,8 +73,6 @@ Read **`CLAUDE.md`**: it covers connecting, identifying the EMG device, and cali
 
 ## Licence
 
-© 2026 Göktuğ Kahyaoğlu. Licensed under
-[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/):
-you may share and adapt this work with credit, not for commercial purposes, and
-adaptations must be shared under the same licence. Bundled third-party components keep
-their own licences, listed in `THIRD_PARTY_NOTICES.md`.
+MIT © 2026 Göktuğ Kahyaoğlu. Use it, change it, sell it, build on it: anything,
+as long as the licence notice stays with it. Bundled third-party components (also
+MIT) are listed in `THIRD_PARTY_NOTICES.md`.

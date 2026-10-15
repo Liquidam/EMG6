@@ -2,7 +2,7 @@
 
 The EMG6 project itself (the TouchDesigner network, the particle shader, the
 input / calibration system and the documentation) is © 2026 Göktuğ Kahyaoğlu and
-licensed under **CC BY-NC-SA 4.0** (see `LICENSE`).
+licensed under the **MIT licence** (see `LICENSE`).
 
 The following bundled components belong to their authors and keep their own licences:
 
