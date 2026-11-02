@@ -181,3 +181,23 @@ so `emg` drops to 0 and nothing changes the world on its own.
 
 When you finish a calibration, write what you set (device, channels, ranges) into
 a `SESSION_<date>.md` next to the .toe, so the next person doesn't start from zero.
+
+---
+
+## Update — 2 November 2026 (this section overrides the values above)
+
+- **Levels:** `emg` 0.15 = the magnet opens at once (closes below 0.12). Keeping the magnet
+  on for **9 s** = next world; short dips only rewind the count. The old 0.22 / 0.70 /
+  0.85-for-12-s table above no longer applies, except the birth in ZERO (0.22 for ~10 s).
+- **Calibration targets:** the performer should open the magnet with a light squeeze and
+  stay above 0.12 while holding. Rest above 0.12 → raise `in_min`; a squeeze that barely
+  gets there → lower `in_max`. Adjust the calibration, not the piece.
+- **`smooth_s`:** 0.2 (Find EMG writes this). It smooths the rise only; `emg` falls 4×
+  faster, so a release stays quick and short spikes are ignored.
+- **Meter:** white line at 0.15 (the 0.70 / 0.85 marks are hidden).
+- **Wizard:** Find EMG never picks an IMU channel (IMU channels = `imu_map` rows plus
+  `imu_channels` in `imu_cal.json`). Find IMU axes keeps the previous accelerometer rows if
+  it doesn't find the accelerometer again.
+- **Guard:** a non-finite `emg` (inf/NaN) is set to 0 and the smoothing is reset.
+- **Shipped state:** port 9100, source `sim`, all channels empty, `imu_cal.json` defaults.
+- Not tested on Windows.

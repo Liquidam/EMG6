@@ -76,3 +76,33 @@ Read **`CLAUDE.md`**: it covers connecting, identifying the EMG device, and cali
 MIT © 2026 Göktuğ Kahyaoğlu. Use it, change it, sell it, build on it: anything,
 as long as the licence notice stays with it. Bundled third-party components (also
 MIT) are listed in `THIRD_PARTY_NOTICES.md`.
+
+---
+
+## Update — 2 November 2026
+
+Tested with a live sensor. This update changes how the piece responds; where it differs
+from the text above, this section is the current behaviour.
+
+**Response**
+- The magnet now opens at **0.15** (and closes below 0.12), and it is visible at once
+  (about 0.5 s) in every world. Before, it opened at 0.22 and took 6–8 s to show.
+- In DUST the magnet first gathers a ball, then a ring opens and grows while you hold.
+- **Next world:** keep the magnet on for **9 seconds**. Short dips are forgiven (they only
+  rewind the count); a real release clears it. This replaces "0.85 held for 12 s".
+- Letting go is faster: the contraction falls 4× faster than it rises, so the field melts
+  within about a second.
+- The birth from ZERO is unchanged (about 0.22 held for ~10 s).
+- The meter on the CALIBRATE panel shows a white line at 0.15. The 0.70 / 0.85 marks are hidden.
+
+**Calibration**
+- Find EMG channel can no longer pick an IMU channel as the muscle.
+- Find EMG sets `smooth_s` to 0.2 (rise only), so spikes after a release don't re-open the magnet.
+- Find IMU axes keeps the previous accelerometer rows if it can't find the accelerometer again.
+- A non-finite contraction value (inf/NaN) is now caught and read as 0.
+
+**Shipped state:** port 9100, source `sim`, no channels mapped, `imu_cal.json` at defaults.
+Run the CALIBRATE panel with your own sensor.
+
+**Known open points:** not tested on Windows yet; the cause of a one-off `inf`
+contraction value is not found (it is now guarded).
